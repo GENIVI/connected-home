@@ -173,19 +173,28 @@ Rectangle {
         height: 1050
         color: "#000e22"
         radius: 10
-        Flickable {
-            id: flickableMap
-            width: 1050; height: 450
-            clip: true
-            contentWidth: mapImage.width; contentHeight: mapImage.height
-            boundsBehavior: Flickable.StopAtBounds
-            contentX: 400
-            contentY: 680
-            Image {
-                id: mapImage
-                source: "qrc:/img/map.png"
-            }
+        AnimatedImage {
+            id: mapAnimation
+            anchors.centerIn: parent
+            width: 1050
+            height: 450
+            source: "qrc:/img/15-Waypoint-Map-Animation-25.gif"
+            playing: (comingHomeDisplay.opacity == 1) ? true : false
         }
+
+//        Flickable {
+//            id: flickableMap
+//            width: 1050; height: 450
+//            clip: true
+//            contentWidth: mapImage.width; contentHeight: mapImage.height
+//            boundsBehavior: Flickable.StopAtBounds
+//            contentX: 400
+//            contentY: 680
+//            Image {
+//                id: mapImage
+//                source: "qrc:/img/map.png"
+//            }
+//        }
         Image {
             id: closeComingHome
             anchors.right: parent.right
