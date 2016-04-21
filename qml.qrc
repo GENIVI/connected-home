@@ -3,9 +3,10 @@
         <file>main.qml</file>
         <file>fonts/Oswald-Regular.ttf</file>
         <file>fonts/Oswald-RegularItalic.ttf</file>
-        <file>img/map.png</file>
         <file>img/close-button.png</file>
         <file>img/loading-animation.gif</file>
         <file>img/15-Waypoint-Map-Animation-25.gif</file>
+        <file>img/genivi-logo.png</file>
+        <file>img/ocf-logo.png</file>
     </qresource>
 </RCC>

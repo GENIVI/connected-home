@@ -182,19 +182,6 @@ Rectangle {
             playing: (comingHomeDisplay.opacity == 1) ? true : false
         }
 
-//        Flickable {
-//            id: flickableMap
-//            width: 1050; height: 450
-//            clip: true
-//            contentWidth: mapImage.width; contentHeight: mapImage.height
-//            boundsBehavior: Flickable.StopAtBounds
-//            contentX: 400
-//            contentY: 680
-//            Image {
-//                id: mapImage
-//                source: "qrc:/img/map.png"
-//            }
-//        }
         Image {
             id: closeComingHome
             anchors.right: parent.right
@@ -255,5 +242,27 @@ Rectangle {
                 height: 50
             }
         }
+    }
+
+    // GENIVI and Open Connectivity Foundation Logos
+
+    Image {
+        id: logoGenivi
+        x: 10
+        y: 10
+        height: 140
+        width: 160
+        z: 13
+        source: "qrc:/img/genivi-logo.png"
+    }
+
+    Image {
+        id: logoOCF
+        x: 205
+        y: 10
+        height: 140
+        width: 284
+        z: 12
+        source: "qrc:/img/ocf-logo.png"
     }
 }
