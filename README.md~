@@ -1,3 +1,0 @@
-Use this project as a stub for developing Qt/QML applications for deploying to the Genivi Demo Platform.
-
-For the application to render on GDP, the IVI surface ID must be set. This property is available for QQuickView-based applications.
