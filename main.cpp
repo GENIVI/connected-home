@@ -1,5 +1,6 @@
 #include <QGuiApplication>
-#include <QQuickView>
+#include <QQmlApplicationEngine>
+//#include <QQuickView>
 
 //
 // Define IVI surface for application
@@ -19,19 +20,13 @@
 
 int main(int argc, char *argv[])
 {
-//    setenv("QT_QPA_PLATFORM", "wayland", 1); // force to use wayland plugin
-//    setenv("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1", 1);
+    setenv("QT_QPA_PLATFORM", "wayland", 1); // force to use wayland plugin
+    setenv("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1", 1);
 
     QGuiApplication app(argc, argv);
 
     // Use QQuickView to load your base QML view
-    QQuickView view(QUrl(QStringLiteral("qrc:/main.qml")));
-
-    // Set the surface ID
-    view.setProperty("IVI-Surface-ID", CONNECTED_HOME_SURFACE_ID);
-
-    // Display the QML
-    view.show();
+    QQmlApplicationEngine engine(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();
 }
