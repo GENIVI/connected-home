@@ -25,7 +25,6 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    // Use QQuickView to load your base QML view
     QQmlApplicationEngine engine(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();
