@@ -1,0 +1,6 @@
+[Unit]
+Description=Connected Home HMI
+
+[Service]
+Environment=LD_PRELOAD=/usr/lib/libEGL.so
+ExecStart=/opt/com.genivi.gdp.connectedhome/bin/qt-smart-demo -platform wayland
